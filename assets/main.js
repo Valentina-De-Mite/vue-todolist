@@ -39,6 +39,7 @@ createApp({
 
       console.log(this.tasks);
     },
+
     removeTask(index) {
       //rimuovo elemento
       this.tasks.splice(index, 1);

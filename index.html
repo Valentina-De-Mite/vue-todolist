@@ -32,7 +32,7 @@
         </div>
         <div class="task-container my-5">
             <ul>
-                <li v-for="task in tasks">
+                <li v-for="(task, index) in tasks">
                     {{task.text}}
                     <i class="fa-solid fa-circle-minus text-danger" @click="removeTask(index)"></i>
                 </li>
