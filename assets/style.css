@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: paleturquoise;
+}
+
+.app {
+  font-family: "Architects Daughter", cursive;
+  width: min(95vw, 500px);
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 30px;
+}
+
+.task-container {
+  background-color: rgb(244, 163, 190);
+  box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+  border-radius: 0.8em;
+  padding: 1rem 2rem;
+}

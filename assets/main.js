@@ -16,7 +16,7 @@ createApp({
       error: false,
       tasks: [
         {
-          text: "Testo della task",
+          text: "",
           done: false,
         },
       ],
@@ -37,6 +37,11 @@ createApp({
         this.newTask = "";
       }
 
+      console.log(this.tasks);
+    },
+    removeTask(index) {
+      //rimuovo elemento
+      this.tasks.splice(index, 1);
       console.log(this.tasks);
     },
   },
