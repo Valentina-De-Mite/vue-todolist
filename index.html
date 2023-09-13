@@ -32,15 +32,20 @@
                 placeholder="inserisci qui la tua task">
             <button @click="addTask" class="btn btn-primary border bottom">Aggiungi</button>
             <p class="mx-3 text-danger my-2" v-show="error">Devi inserire una task che non sia già presente nella
-                lista, e non è valido inserire una task vuota</p>
+                lista, e non è valido inserire una task vuota!</p>
 
         </div>
         <div class="task-container my-5">
             <ul class=" my-3" v-if="tasks.length > 0">
-                <li v-for="(task, index) in tasks" class="list-group-item d-flex justify-content-between">
+                <li v-for="(task, index) in tasks" class=" d-flex justify-content-between"
+                    :class="task.done === true ? 'done' : '' ">
+                    <input type="checkbox" name="checkbox" v-model="task.done">
                     {{task.text}}
                     <i class="fa-solid fa-circle-minus text-danger" @click="removeTask(index)"></i>
+
                 </li>
+                <div class="line my-3"></div>
+
 
             </ul>
         </div>

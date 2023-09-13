@@ -14,12 +14,7 @@ createApp({
     return {
       newTask: "",
       error: false,
-      tasks: [
-        {
-          text: "",
-          done: false,
-        },
-      ],
+      tasks: [],
     };
   },
   methods: {
@@ -33,7 +28,7 @@ createApp({
         this.error = true;
       } else {
         // // pusho il valore dell'input dentro la lista di task
-        this.tasks.push({ text: this.newTask, done: false });
+        this.tasks.unshift({ text: this.newTask, done: false });
         this.newTask = "";
       }
 
@@ -44,6 +39,11 @@ createApp({
       //rimuovo elemento
       this.tasks.splice(index, 1);
       console.log(this.tasks);
+    },
+
+    checkDone(task, index) {
+      if (task.done == true) {
+      }
     },
   },
 }).mount("#app");

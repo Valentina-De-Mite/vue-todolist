@@ -18,10 +18,19 @@ body {
   right: 0;
   top: 30px;
 }
-
+.line {
+  background-color: aliceblue;
+  border-radius: 1rem;
+  height: 3px;
+}
 .task-container {
   background-color: rgb(244, 163, 190);
   box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   padding: 1rem 2rem;
+  height: 600px;
+}
+
+.done {
+  text-decoration: line-through;
 }
