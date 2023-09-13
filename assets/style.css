@@ -9,7 +9,7 @@ body {
   background-color: paleturquoise;
 }
 
-.app {
+.container {
   font-family: "Architects Daughter", cursive;
   width: min(95vw, 500px);
   position: absolute;
@@ -22,6 +22,6 @@ body {
 .task-container {
   background-color: rgb(244, 163, 190);
   box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
-  border-radius: 0.8em;
+  border-radius: 1rem;
   padding: 1rem 2rem;
 }
