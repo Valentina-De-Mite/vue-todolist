@@ -5,12 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sliders</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"> -->
+    <title>TO DO List</title>
     <link rel="stylesheet" href="./assets/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
         integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
@@ -20,21 +15,24 @@
 
 <body>
 
-    <div id="app">
-        <div class="container">
-            <div class="new-task">
-                <input v-model="newTask" type="text">
-                <button @click="addTask">Aggiungi</button>
+    <div id="app" class="container">
 
-            </div>
-            <div class="task-container">
-                <ul>
-                    <li class="task" v-for="task in task">
 
-                    </li>
-                </ul>
-            </div>
+        <div class="new-task">
+            <input type="text" v-model="newTask">
+            <button @click="addTask">Aggiungi</button>
+            <small class="mx-3 text-danger" v-show="error">Devi inserire una task che non sia già presente nella
+                lista, e non è valido inserire una task vuota</small>
+
         </div>
+        <div class="task-container">
+            <ul>
+                <li v-for="task in tasks">
+                    {{task.text}}
+                </li>
+            </ul>
+        </div>
+
 
 
     </div>

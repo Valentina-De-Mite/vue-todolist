@@ -13,13 +13,31 @@ createApp({
   data() {
     return {
       newTask: "",
+      error: false,
       tasks: [
         {
-          id: "",
-          task: "",
-          condition: true,
+          text: "Testo della task",
+          done: false,
         },
       ],
     };
+  },
+  methods: {
+    addTask() {
+      //prima recupero il valore dell'input emesso dall'utente
+      console.log(this.newTask);
+
+      // non far si che aggiunga una task vuota
+      if (this.newTask.length == 0) {
+        //mostro errore
+        this.error = true;
+      } else {
+        // // pusho il valore dell'input dentro la lista di task
+        this.tasks.push({ text: this.newTask, done: false });
+        this.newTask = "";
+      }
+
+      console.log(this.tasks);
+    },
   },
 }).mount("#app");
